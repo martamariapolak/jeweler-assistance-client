@@ -1,7 +1,16 @@
-import ReactDOM from'react-dom';
+import ReactDOM from'react-dom/client';
+import RestApiClient from './utils/RestApiClient';
+
+async function main()
+{
+let api= new RestApiClient("http://localhost:3001");
+if(process.env.REact_APP_MODE==="render")  //zmienna środowiskowa w katalogu zmiennych środowiskowych env
+{
+  api=new RestApiClient("https://jeweler-assistant-server-0tg3.onrender.com");
+}
+const response=await api.get("/ping");
 
 const root=ReactDOM.createRoot(document.getElementById('root'));
-root.render(<h1>Hello render</h1>);
-
-import sqlite3 from "sqlite3";
-const db=new sqlite3.Database("jeweler-assistance.db");
+root.render(<h1>{response}</h1>);
+}
+main();

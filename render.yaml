@@ -5,5 +5,5 @@ services:
       repo:  https://github.com/martamariapolak/jeweler-assistance-client
       plan: free
       buildCommand: npm install
-      startCommand: npm start
+      startCommand: npm run start-render
   
