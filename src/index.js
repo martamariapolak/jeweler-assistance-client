@@ -11,6 +11,6 @@ if(process.env.REact_APP_MODE==="render")  //zmienna środowiskowa w katalogu zm
 const response=await api.get("/ping");
 
 const root=ReactDOM.createRoot(document.getElementById('root'));
-root.render(<h1>{response}</h1>);
+root.render(<h1>{response.message}</h1>);
 }
 main();
