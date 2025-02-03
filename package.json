@@ -1,5 +1,5 @@
 {
-  "name": "jeweler-assistance",
+  "name": "jeweler-assistance-client",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
